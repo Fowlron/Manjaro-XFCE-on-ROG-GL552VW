@@ -30,7 +30,7 @@
   - `mhwd -i pci video-hybrid-intel-nvidia-bumblebee`
 - Reboot again
 
-#Checking Drivers
+# Checking Drivers
 To check that the drivers are working properly, we can:
 - Run `systemctl status bumblebeed`
   - The output should state that the daemon is running
@@ -43,7 +43,7 @@ To check that the drivers are working properly, we can:
 
 If everything is working properly, then you should have a stable system running. Note that everything will use the cpu by default, unless you specifically run the command with optirun. 
 
-#Installing yay
+# Installing yay
 Optionally, you can install yay to have access to the AUR:
 
     sudo pacman -S gcc make binutils git
@@ -53,13 +53,13 @@ Optionally, you can install yay to have access to the AUR:
     cd ..
     rm -rf yay
 
-Quick reference guide to using yay (most used commands):
+Quick yay reference guide (most used commands):
 - `yay`: fully update and upgrade the system (equivalent to `sudo pacman -Syu`, if you did not install yay)
 - `yay -S name`: install a package from either the repos or the arch user repositories (equivalent to `sudo pacman -S name`, if you did not install yay, although pacman will not install from the AUR)
 - `yay -Rns name`: uninstall a package and all the freed dependencies (equivalent to `sudo pacman -Rns name`, if you did not install yay)
 
 
-#Touchpad Natural Scrolling
+# Touchpad Natural Scrolling
 By default, the touchpad two-finger scrolling feels weird (reverse from what I'm used too, at least). Manjaro uses libinput to handle input, so you can fix this easily:
 - sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
 - Add `Option "Natural Scrolling" "true"` under the touchpad section (not pointers)
