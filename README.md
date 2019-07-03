@@ -61,5 +61,5 @@ Quick yay reference guide (most used commands):
 
 # Touchpad Natural Scrolling
 By default, the touchpad two-finger scrolling feels weird (reverse from what I'm used too, at least). Manjaro uses libinput to handle input, so you can fix this easily:
-- sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
+- `sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf`
 - Add `Option "Natural Scrolling" "true"` under the touchpad section (not pointers)
