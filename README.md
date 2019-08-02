@@ -21,13 +21,13 @@
 - Add yourself to the bumblebee group:
   - `sudo gpasswd -a yourusername bumblebee`
 - Enable the bumblebee daemon:
-		sudo systemctl enable bumblebeed.service
-		sudo systemctl enable bumblebeed
+    sudo systemctl enable bumblebeed.service
+    sudo systemctl enable bumblebeed
 - Edit the grub file (`sudo nano /etc/default/grub`) and add `acpi_osi=! acpi_osi=\"Windows 2009\"` after `quiet` in the line `GRUB_CMDLINE_LINUX_DEFAULT="quiet"`
 - Run `sudo update-grub`
 - Reboot
 - Install the nvidia-intel-bumblebee driver:
-  - `mhwd -i pci video-hybrid-intel-nvidia-bumblebee`
+  - `sudo mhwd -i pci video-hybrid-intel-nvidia-bumblebee`
 - Reboot again
 
 # Checking Drivers
