@@ -21,8 +21,10 @@
 - Add yourself to the bumblebee group:
   - `sudo gpasswd -a yourusername bumblebee`
 - Enable the bumblebee daemon:
-    sudo systemctl enable bumblebeed.service
+
+    sudo systemctl enable bumblebeed.service 
     sudo systemctl enable bumblebeed
+    
 - Edit the grub file (`sudo nano /etc/default/grub`) and add `acpi_osi=! acpi_osi=\"Windows 2009\"` after `quiet` in the line `GRUB_CMDLINE_LINUX_DEFAULT="quiet"`
 - Run `sudo update-grub`
 - Reboot
